@@ -1,0 +1,17 @@
+---
+title: "html_docco template example"
+output:
+  rmdformats::readthedown:
+      code_folding: show
+      thumbnails: false
+      lightbox: false
+      toc_depth: 3
+      toc_float:
+        collapsed: false
+---
+  
+  
+```{r, results="asis", echo=FALSE, message=FALSE, warning=FALSE}
+res <- knitr::knit_child('_example_body.rmd', quiet = TRUE)
+cat(res, sep = '\n')
+```
